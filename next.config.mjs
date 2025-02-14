@@ -6,7 +6,8 @@ const nextConfig = {
                 hostname: "picsum.photos",
             }
         ]
-    }
+    },
+    output: "export"
 };
 
 export default nextConfig;
