@@ -1,8 +1,8 @@
 import React from 'react'
 import SlideUp from '@/lib/animations/slideUp'
-import { cn } from '@/lib/utils'
+import {cn} from '@/lib/utils'
 
-const Title = ({ children, size, className }) => {
+const Title = ({children, size, className}) => {
 
     // 7.5xl = 70px
     // 6xl = 60px
@@ -22,7 +22,9 @@ const Title = ({ children, size, className }) => {
     }
     if (size === "2xl") {
         return (
-            <h5 className={cn(`font-extra bold lg:text-2xl md:text-xl text-xl md:leading-[140%]`, className)}>{children}</h5>
+            <SlideUp delay={5}>
+                <h5 className={cn(`font-extra bold lg:text-2xl md:text-xl text-xl md:leading-[140%]`, className)}>{children}</h5>
+            </SlideUp>
         )
     }
     if (size === "3.5xl") {
@@ -34,7 +36,6 @@ const Title = ({ children, size, className }) => {
             </SlideUp>
         )
     }
-
 
 
 }

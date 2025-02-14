@@ -6,7 +6,7 @@ import SlideUp from '@/lib/animations/slideUp';
 
 const CardTwo = ({id, title, blog_desc, src, date, category}) => {
     return (
-        <SlideUp delay={id}>
+        <SlideUp key={id} delay={id * 0.1}>
             <div className="bg-background group/card layer-card shadow-md rounded-[10px] overflow-hidden">
                 <div className="relative overflow-hidden">
                     <Image
@@ -63,7 +63,7 @@ const CardTwo = ({id, title, blog_desc, src, date, category}) => {
                             href={"/blog-details"}
                             className="lg:text-2xl text-xl font-semibold leading-[140%] group-hover/card:text-secondary-foreground transition-all duration-500"
                         >
-                            {title}
+                            {id + " " + title}
                         </Link>
                     </h2>
                     <p className="mt-[15px] truncate">{blog_desc}</p>

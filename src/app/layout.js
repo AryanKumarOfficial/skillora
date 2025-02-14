@@ -1,4 +1,7 @@
 import "./globals.css";
+import {useLoadTop} from "@/hooks/useLoadTop.js"
+import ScrollButton from "@/components/ui/ScrollButton";
+import {Toaster} from "react-hot-toast";
 
 export const metadata = {
     title: "Future Bright Academy - Empowering Young Minds, Building Bright Futures!",
@@ -8,7 +11,25 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-        <body>{children}</body>
+        <body>
+        <useLoadTop/>
+        <Toaster
+            position="top-right"
+            reverseOrder={false}
+            gutter={8}
+            toastOptions={{
+                success: {
+                    style: {
+                        background: "#1CBBB4",
+                        color: "#fff",
+                        fontWeight: "900",
+                    },
+                },
+            }}
+        />
+        {children}
+        <ScrollButton/>
+        </body>
         </html>
     );
 }

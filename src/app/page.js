@@ -7,6 +7,7 @@ import Vision from "@/components/sections/vision";
 import Counters from "@/components/sections/counters";
 import News from "@/components/sections/news";
 import LatestServices from "@/components/latest";
+import FooterTwo from "@/components/sections/footers/footerTwo";
 
 export const metadata = {
     title: "Home | Future Bright Academy",
@@ -36,7 +37,8 @@ const Home = () => {
                 {/*<NewsletterOne/>*/}
                 <LatestServices/>
             </main>
-            <FooterOne/>
+            {/*<FooterOne/>*/}
+            <FooterTwo/>
         </>
     )
 }

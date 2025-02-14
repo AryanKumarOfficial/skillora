@@ -5,6 +5,7 @@ import {Button} from '@/components/ui/button'
 import Title from '@/components/ui/title'
 import ThreeLine from '../../../../public/icons/threeLine'
 import styles from "@/styles/Hero.module.css"
+import SlideUp from "@/lib/animations/slideUp";
 
 const HeroOne = () => {
     return (
@@ -30,11 +31,11 @@ const HeroOne = () => {
                         <span>Future Bright Academy is a leading educational institution in Nepal. We provide quality education to students from Nursery to Grade 12.
                         </span>
                     </Title>
-                    <div className="mt-6">
+                    <SlideUp delay={8} className="mt-6">
                         <Button className={"mt-28"} asChild variant={"secondary"}>
                             <Link href="/about-us">Learn More</Link>
                         </Button>
-                    </div>
+                    </SlideUp>
                 </div>
                 <div
                     className="absolute left-2.5 lg:top-0 top-10 lg:max-w-full max-w-[200px] sm:block hidden animate-up-down">

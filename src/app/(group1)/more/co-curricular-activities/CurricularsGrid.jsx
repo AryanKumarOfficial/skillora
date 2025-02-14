@@ -35,6 +35,11 @@ const CurricularGrid = () => {
                         ))}
                     </div>
 
+                    {/* show the number of cards available */}
+                    <h2 className="text-2xl font-bold text-primary-foreground mb-5">
+                        {filteredCurricular.length} {filter === 'All' ? '' : filter} {" "} Curricular {filteredCurricular.length > 1 ? 'Activities' : 'Activity'}
+                    </h2>
+
                     <div className="grid md:grid-cols-3 grid-cols-1 gap-y-7.5 lg:gap-x-[45px] gap-x-5 lg:pt-15 pt-10">
                         {filteredCurricular.map(({id, title, description, date, image, category}) => (
                             <CardTwo

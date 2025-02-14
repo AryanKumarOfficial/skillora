@@ -52,7 +52,7 @@ const FooterOne = () => {
                 </div>
                 <CopyRight />
             </div>
-            <ScrollUp />
+            {/*<ScrollUp />*/}
         </footer>
     )
 }
