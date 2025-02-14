@@ -9,8 +9,8 @@ const nextConfig = {
         ],
         unoptimized: true
     },
-    trailingSlash:true,
-    basePath:"next-school-web-app"
+    trailingSlash: true,
+    basePath: "/next-school-web-app"
 };
 
 export default nextConfig;
