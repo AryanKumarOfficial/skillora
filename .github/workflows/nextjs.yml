@@ -1,54 +1,71 @@
-name: Deploy to GitHub Pages
+name: Deploy Next.js app to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main # or your main branch name
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "gh-pages"
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: pnpm
+          node-version: '18' # or your preferred Node.js version
 
       - name: Setup pnpm
-        run: corepack enable && pnpm install -g pnpm@latest
+        uses: pnpm/action-setup@v3
+        with:
+          version: '10' # or your preferred pnpm version
+          run_install: false # We will install dependencies explicitly
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          STORE_PATH=$(pnpm store path)
+          echo "::set-output name=dir::$STORE_PATH"
 
-      - name: Build project
+      - name: Cache pnpm modules
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies with pnpm
+        run: pnpm install
+
+      - name: Build with Next.js
         run: pnpm build
-        env:
-          NEXT_PUBLIC_BASE_PATH: '/next-school-web-app'  # Replace with your repository name
+
+#      - name: Static export with Next.js
+#        run: pnpm next export
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: out/
+          path: ./out # or your export output directory (default is 'out' for next export)
 
-  deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
