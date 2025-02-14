@@ -1,0 +1,28 @@
+.heroContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.heroContainer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 125px);
+    background: url("../../public/images/school-1.png") no-repeat center center/cover;
+    opacity: 0.75;
+}
+
+.heroContainer:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 125px);
+    background: #000;
+    opacity: 0.55;
+}
