@@ -8,6 +8,9 @@ const nextConfig = {
             },
             {
                 hostname: "images.pexels.com"
+            },
+            {
+                hostname: "images.unsplash.com"
             }
         ],
         // unoptimized: true

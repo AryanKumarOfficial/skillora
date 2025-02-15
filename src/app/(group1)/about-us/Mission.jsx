@@ -44,13 +44,14 @@ const VisionMission = () => {
                                     </div>
                                     <SectionDescription>
                                         We commit to providing holistic education through:
-                                        <ul className="list-disc pl-5 mt-2 space-y-2">
-                                            <li>Innovative teaching methodologies</li>
-                                            <li>Character development programs</li>
-                                            <li>State-of-the-art facilities</li>
-                                            <li>Inclusive learning environment</li>
-                                        </ul>
                                     </SectionDescription>
+                                    <ul className="list-disc pl-5 mt-2 space-y-2">
+                                        <li><SectionDescription>Innovative teaching methodologies</SectionDescription>
+                                        </li>
+                                        <li><SectionDescription>Character development programs</SectionDescription></li>
+                                        <li><SectionDescription>State-of-the-art facilities</SectionDescription></li>
+                                        <li><SectionDescription>Inclusive learning environment</SectionDescription></li>
+                                    </ul>
                                 </div>
                             </div>
 

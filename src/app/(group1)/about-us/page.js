@@ -7,6 +7,8 @@ import Testimonial from '@/components/sections/testimonial'
 import AboutTwo from "@/components/sections/abouts/aboutTwo";
 import History from "@/app/(group1)/about-us/History";
 import VisionMission from "@/app/(group1)/about-us/Mission";
+import Teams from "@/components/sections/teams/teams";
+import Teachers from "@/app/(group1)/about-us/Teachers";
 
 export const metadata = {
     title: "About Us | Future Bright Academy",
@@ -19,6 +21,7 @@ const AboutUs = () => {
             <PageTitle pageName={"About Us"} breadcrumbCurrent={"About Us"}/>
             <History gridClass={"lg:grid-cols-2"} isAboutpage={true}/>
             <VisionMission/>
+            <Teachers/>
             {/*<Pricing />*/}
             {/*<Testimonial />*/}
             {/*<NewsletterTwo />*/}
