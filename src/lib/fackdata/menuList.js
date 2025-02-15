@@ -159,7 +159,7 @@ export const menuList = [
     },
     {
         id: 6,
-        path: "#",
+        path: "/gallery",
         label: "Gallery",
         dropDownMenu: false
     },
