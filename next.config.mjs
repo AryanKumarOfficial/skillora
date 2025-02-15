@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
+    // output: "export",
     images: {
         remotePatterns: [
             {
                 hostname: "picsum.photos",
             }
         ],
-        unoptimized: true
+        // unoptimized: true
     },
-    trailingSlash: true,
-    basePath: "/next-school-web-app"
+    // trailingSlash: true,
+    // basePath: "/next-school-web-app"
 };
 
 export default nextConfig;
