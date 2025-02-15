@@ -22,7 +22,7 @@ const OlympiadGrid = () => {
                 <div className="lg:pl-11">
 
                     {/* Filter Buttons */}
-                    <div className="mb-8 flex gap-4">
+                    <div className="mb-8 flex flex-wrap gap-4">
                         {categories.map((category) => (
                             <button
                                 key={category}
