@@ -1,10 +1,9 @@
 "use client";
 import React, {useState} from 'react';
-import Card from './Card';
 import {curricular} from "@/lib/fackdata/curricular";
 import CardTwo from "@/app/(group1)/more/co-curricular-activities/CardTwo";
 
-const SchoolActivitesGrid = () => {
+const  CurricularActivitiesGrid= () => {
     const [filter, setFilter] = useState('All');
 
     const handleFilterChange = (category) => {
@@ -59,4 +58,4 @@ const SchoolActivitesGrid = () => {
     );
 };
 
-export default SchoolActivitesGrid;
+export default CurricularActivitiesGrid;

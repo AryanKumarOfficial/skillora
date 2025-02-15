@@ -1,7 +1,7 @@
 "use client";
 import React, {useState} from 'react';
-import {curricular} from "@/lib/fackdata/curricular";
-import CardTwo from "@/app/(group1)/more/co-curricular-activities/CardTwo";
+import schoolActivities from "@/data/schoolactivities.json"
+import CardTwo from "@/app/(group1)/more/school-activities/CardTwo";
 
 const CurricularGrid = () => {
     const [filter, setFilter] = useState('All');
@@ -10,11 +10,11 @@ const CurricularGrid = () => {
         setFilter(category);
     };
 
-    const filteredCurricular = filter === 'All'
-        ? curricular
-        : curricular.filter((item) => item.category === filter);
+    const filteredSchoolActivities = filter === 'All'
+        ? schoolActivities
+        : schoolActivities.filter((item) => item.category === filter);
 
-    const categories = ['All', ...new Set(curricular.map((item) => item.category))];
+    const categories = ['All', ...new Set(schoolActivities.map((item) => item.category))];
 
     return (
         <div className="lg:pb-15 pb-10">
@@ -36,11 +36,11 @@ const CurricularGrid = () => {
 
                     {/* show the number of cards available */}
                     <h2 className="text-2xl font-bold text-primary-foreground mb-5">
-                        {filteredCurricular.length} {filter === 'All' ? '' : filter} {" "} Curricular {filteredCurricular.length > 1 ? 'Activities' : 'Activity'}
+                        {filteredSchoolActivities.length} {filter === 'All' ? '' : filter} {" "} School {filteredSchoolActivities.length > 1 ? 'Activities' : 'Activity'}
                     </h2>
 
                     <div className="grid md:grid-cols-3 grid-cols-1 gap-y-7.5 lg:gap-x-[45px] gap-x-5 lg:pt-15 pt-10">
-                        {filteredCurricular.map(({id, title, description, date, image, category}) => (
+                        {filteredSchoolActivities.map(({id, title, description, date, image, category}) => (
                             <CardTwo
                                 key={id}
                                 id={id}

@@ -5,17 +5,20 @@ import {FaArrowRight} from 'react-icons/fa6';
 import SlideUp from '@/lib/animations/slideUp';
 
 const CardTwo = ({id, title, blog_desc, src, date, category}) => {
+    const [iSrc, setISrc] = React.useState(src);
     return (
         <SlideUp key={id} delay={id * 0.1}>
             <div className="bg-background group/card layer-card shadow-md rounded-[10px] overflow-hidden">
-                <div className="relative overflow-hidden">
+                <div className="relative w-full h-48 overflow-hidden">
                     <Image
-                        src={src}
+                        src={iSrc}
                         alt="blog-image"
-                        width={407}
-                        height={279}
-                        sizes="100vw"
-                        className="w-full max-h-80 h-auto"
+                        layout={"fill"}
+                        objectFit={"cover"}
+                        loader={({src}) => src}
+                        loading={"lazy"}
+                        className=""
+                        onError={() => setISrc('https://images.pexels.com/photos/7973203/pexels-photo-7973203.jpeg')}
                     />
 
                     {/* Category Chip */}
@@ -58,12 +61,12 @@ const CardTwo = ({id, title, blog_desc, src, date, category}) => {
                 </div>
 
                 <div className="pt-7.5 px-4 pb-10">
-                    <h2 className="max-w-[377px]">
+                    <h2 className="max-w-[377px] truncate">
                         <Link
                             href={"/blog-details"}
                             className="lg:text-2xl text-xl font-semibold leading-[140%] group-hover/card:text-secondary-foreground transition-all duration-500"
                         >
-                            {id + " " + title}
+                            {title}
                         </Link>
                     </h2>
                     <p className="mt-[15px] truncate">{blog_desc}</p>

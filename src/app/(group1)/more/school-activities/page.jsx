@@ -1,8 +1,6 @@
 import React from 'react'
-import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
 import PageTitle from '@/components/sections/pageTitle'
-import ServicesTwo from '@/components/sections/services/servicesTwo'
-import SchoolActivitiesGrid from "@/app/(group1)/more/co-curricular-activities/CurricularsGrid";
+import SchoolActivitiesGrid from "@/app/(group1)/more/school-activities/SchoolActivitiesGrid";
 
 export const metadata = {
     title: "School Activities | Future Bright Academy",

@@ -5,6 +5,9 @@ const nextConfig = {
         remotePatterns: [
             {
                 hostname: "picsum.photos",
+            },
+            {
+                hostname: "images.pexels.com"
             }
         ],
         // unoptimized: true

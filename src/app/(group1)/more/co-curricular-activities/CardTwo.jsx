@@ -63,7 +63,7 @@ const CardTwo = ({id, title, blog_desc, src, date, category}) => {
                             href={"/blog-details"}
                             className="lg:text-2xl text-xl font-semibold leading-[140%] group-hover/card:text-secondary-foreground transition-all duration-500"
                         >
-                            {id + " " + title}
+                            {title}
                         </Link>
                     </h2>
                     <p className="mt-[15px] truncate">{blog_desc}</p>
