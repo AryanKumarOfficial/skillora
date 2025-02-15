@@ -29,7 +29,7 @@ const HeaderOne = () => {
 
                                     <div className="flex items-center gap-6 ">
                                         <div className="ml-16 cursor-pointer" onClick={() => setIsSerchActive(true)}>
-                                            <FaMagnifyingGlass className='text-xl' />
+                                            {/*<FaMagnifyingGlass className='text-xl' />*/}
                                         </div>
                                         <Button asChild variant="ghost" className="sm:flex hidden">
                                             <Link href={"/contact-us"}> Get A Quote <FaArrowRight /></Link>
@@ -42,7 +42,7 @@ const HeaderOne = () => {
                                         </div>
                                     </div>
 
-                                    <SearchForm isSerchActive={isSerchActive} setIsSerchActive={setIsSerchActive} />
+                                    {/*<SearchForm isSerchActive={isSerchActive} setIsSerchActive={setIsSerchActive} />*/}
                                 </div>
                             </div>
                         </div>

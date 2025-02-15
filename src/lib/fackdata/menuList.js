@@ -116,7 +116,7 @@ export const menuList = [
     },
     {
         id: 5,
-        path: "#",
+        path: "/more",
         label: "More",
         dropDownMenu: [
             {
