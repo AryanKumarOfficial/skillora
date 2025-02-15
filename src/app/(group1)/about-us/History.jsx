@@ -1,13 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-
-import {Button} from '@/components/ui/button'
 import SectionName from '@/components/ui/sectionName'
 import Title from '@/components/ui/title'
 import SectionDescription from '@/components/ui/sectionDescription'
-// import Kindergarden from '../../../../public/icons/kindergarden'
-import SlideUp from '@/lib/animations/slideUp'
 import SlideDown from '@/lib/animations/slideDown'
 
 
