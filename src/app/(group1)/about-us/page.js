@@ -9,6 +9,7 @@ import History from "@/app/(group1)/about-us/History";
 import VisionMission from "@/app/(group1)/about-us/Mission";
 import Teams from "@/components/sections/teams/teams";
 import Teachers from "@/app/(group1)/about-us/Teachers";
+import Committee from "@/app/(group1)/about-us/Committee";
 
 export const metadata = {
     title: "About Us | Future Bright Academy",
@@ -22,6 +23,7 @@ const AboutUs = () => {
             <History gridClass={"lg:grid-cols-2"} isAboutpage={true}/>
             <VisionMission/>
             <Teachers/>
+            <Committee/>
             {/*<Pricing />*/}
             {/*<Testimonial />*/}
             {/*<NewsletterTwo />*/}
