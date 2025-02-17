@@ -11,6 +11,9 @@ const nextConfig = {
             },
             {
                 hostname: "images.unsplash.com"
+            },
+            {
+                hostname: "plus.unsplash.com"
             }
         ],
         // unoptimized: true

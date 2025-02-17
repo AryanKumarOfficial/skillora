@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import SectionName from '@/components/ui/sectionName'
 import Title from '@/components/ui/title'
 import CardOne from './cardOne'
@@ -44,14 +44,18 @@ const Gallery = () => {
             <div className="container">
                 <div className="text-center flex flex-col items-center">
                     <SectionName>Latest Portfolio</SectionName>
-                    <Title size={"3.5xl"} className={"lg:max-w-[630px]"}>Exploring Minds Elementary School Education the only school</Title>
+                    <Title size={"3.5xl"} className={"lg:max-w-[630px]"}>
+                        Explore Our State-of-the-Art School Infrastructure
+                    </Title>
+
                 </div>
                 <div className="pt-10">
                     <ul className="flex items-center justify-center flex-wrap md:gap-7.5 gap-5">
                         {
-                            categoryList.map(({ data_target, id, label }) => {
+                            categoryList.map(({data_target, id, label}) => {
                                 return (
-                                    <li key={id} onClick={() => setActiveTab(data_target)} className={`px-5 py-2.5 text-xl font-700 border border-[#F2F2F2] rounded-[10px] font-jost cursor-pointer hover:bg-primary hover:text-cream-foreground transition-all duration-500 ${activeTab === data_target ? "bg-primary text-cream-foreground" : ""}`}>
+                                    <li key={id} onClick={() => setActiveTab(data_target)}
+                                        className={`px-5 py-2.5 text-xl font-700 border border-[#F2F2F2] rounded-[10px] font-jost cursor-pointer hover:bg-primary hover:text-cream-foreground transition-all duration-500 ${activeTab === data_target ? "bg-primary text-cream-foreground" : ""}`}>
                                         {label}
                                     </li>
                                 )
@@ -60,10 +64,10 @@ const Gallery = () => {
                     </ul>
                     <SlideUp>
                         <div className="mt-[64px] overflow-hidden relative ">
-                            <CardOne data_target={activeTab} />
-                            <CardTwo data_target={activeTab} />
-                            <CardThree data_target={activeTab} />
-                            <CardFour data_target={activeTab} />
+                            <CardOne data_target={activeTab}/>
+                            <CardTwo data_target={activeTab}/>
+                            <CardThree data_target={activeTab}/>
+                            <CardFour data_target={activeTab}/>
                         </div>
                     </SlideUp>
                 </div>
