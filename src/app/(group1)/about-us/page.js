@@ -10,6 +10,7 @@ import VisionMission from "@/app/(group1)/about-us/Mission";
 import Teams from "@/components/sections/teams/teams";
 import Teachers from "@/app/(group1)/about-us/Teachers";
 import Committee from "@/app/(group1)/about-us/Committee";
+import TopAchievements from "@/app/(group1)/about-us/TopAchievements";
 
 export const metadata = {
     title: "About Us | Future Bright Academy",
@@ -24,6 +25,7 @@ const AboutUs = () => {
             <VisionMission/>
             <Teachers/>
             <Committee/>
+            <TopAchievements/>
             {/*<Pricing />*/}
             {/*<Testimonial />*/}
             {/*<NewsletterTwo />*/}
