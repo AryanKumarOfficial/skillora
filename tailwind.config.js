@@ -29,8 +29,8 @@ module.exports = {
                 "25": "100px"
             },
             backgroundImage: {
-                'testimonial-banner': "url('/images/testimonial/bg-img.png')",
-                'newsletter-banner': "url('/images/newsletter/bg-img.png')",
+                'testimonial-banner': "url('/images/testimonial/bg-principal-2.png')",
+                'newsletter-banner': "url('/images/newsletter/bg-principal-2.png')",
                 'newsletter-shap': "url('/images/shapes/egg-shap.png')",
 
             },
