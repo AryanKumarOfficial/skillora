@@ -1,48 +1,115 @@
 import React from 'react'
-import Link from 'next/link'
-import SectionDescription from '@/components/ui/sectionDescription'
-import SectionName from '@/components/ui/sectionName'
-import Title from '@/components/ui/title'
-import {Button} from '@/components/ui/button'
+import CardTwo from './cardTwo'
+import Crayon from '../../../../public/icons/crayon'
+import Scissors from '../../../../public/icons/scissors'
+import BabyCutlery from '../../../../public/icons/baby-cutlery'
+import BabyBody from '../../../../public/icons/baby-body'
+import Title from "@/components/ui/title";
+import SectionName from "@/components/ui/sectionName";
+import SectionDescription from "@/components/ui/sectionDescription";
+import TeacherIcon from "../../../../public/icons/Teacher";
+import AwardIcon from "../../../../public/icons/AwardIcon";
+import BookIcon from "../../../../public/icons/BookIcon";
+import SchoolIcon from "../../../../public/icons/SchoolIcon";
+import book from "../../../../public/icons/book"
 
-import Kindergarden from '../../../../public/icons/kindergarden'
-import Book from '../../../../public/icons/book'
-import Blocks from '../../../../public/icons/blocks'
-import Chalkboard from '../../../../public/icons/chalkboard'
-import CardOne from '../successProjects/cardOne'
+const SuccessProjectTwo = () => {
 
-const SuccessProjectOne = () => {
+    const cardData = [
+        {
+            id: 1,
+            icon: <SchoolIcon/>, // Replace with appropriate school-related icon
+            number: "1500",
+            title: "Students Enrolled",
+            color: "text-primary-foreground"
+        },
+        {
+            id: 2,
+            icon: <TeacherIcon/>, // Replace with teacher icon
+            number: "120",
+            title: "Qualified Teachers",
+            color: "text-secondary-foreground"
+        },
+        {
+            id: 3,
+            icon: <AwardIcon/>, // Replace with award icon
+            number: "50",
+            title: "Awards & Achievements",
+            color: "text-primary-foreground"
+        },
+        {
+            id: 4,
+            icon: <BookIcon/>, // Replace with book or learning-related icon
+            number: "100",
+            title: "Courses Offered",
+            color: "text-green-foreground"
+        }
+    ]
+
     return (
-        <section className="lg:pt-15 pt-10 lg:pb-15 pb-10">
+        <div className="lg:pt-15 lg:pb-15 pt-10 pb-10">
             <div className="container">
-                <div className="grid xl:grid-cols-2 lg:grid-cols-[40%_auto] grid-cols-1 gap-7.5">
+                <div className="grid lg:grid-cols-2 gap-10">
+                    {/* Cards Section */}
+                    <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2">
+                        {cardData.map((card, index) => (
+                            <CardTwo key={index} icon={card.icon} number={card.number} title={card.title}
+                                     color={card.color}/>
+                        ))}
+                    </div>
 
-                    <div className="lg:max-w-[600px]">
-                        <SectionName className={"text-primary-foreground"}>At a Glance</SectionName>
-                        <Title size={"3.5xl"} className={"lg:max-w-[410px] pb-5"}>Our Progress</Title>
-                        <SectionDescription> Discover the key milestones, accomplishments, and impactful numbers that
-                            reflect our commitment to nurturing excellence in education and holistic development.
+                    {/* Info Section */}
+                    <div className="flex flex-col justify-start items-start gap-6 p-8 rounded-xl">
+                        <SectionName>
+                            At a Glance
+                        </SectionName>
+                        <Title size={"3.5xl"} className={"text-primary-foreground font-nunito"}>
+                            Our Success Stories
+                        </Title>
+                        <SectionDescription>
+                            Discover the key milestones, accomplishments, and impactful numbers that reflect our
+                            commitment to nurturing excellence in education and holistic development.
                         </SectionDescription>
-                        <Button asChild variant="outline" className="mt-10">
-                            <Link href={"/contact-us"}>Read More</Link>
-                        </Button>
+                        <div className="grid lg:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-6">
+                            {/* Image 1 */}
+                            <div className="w-full group">
+                                <img
+                                    src="/images/badminton.jpg"
+                                    alt="Success Image 1"
+                                    className="rounded-xl shadow-lg w-full h-64 object-cover transform group-hover:scale-105 transition-all duration-300 cursor-pointer"
+                                />
+                            </div>
+                            {/* Image 2 */}
+                            <div className="w-full group">
+                                <img
+                                    src="/images/group.jpg"
+                                    alt="Success Image 2"
+                                    className="rounded-xl shadow-lg w-full h-64 object-cover transform group-hover:scale-105 transition-all duration-300 cursor-pointer"
+                                />
+                            </div>
+                            {/* Image 3 */}
+                            <div className="w-full group">
+                                <img
+                                    src="/images/members.png"
+                                    alt="Success Image 3"
+                                    className="rounded-xl shadow-lg w-full h-64 object-cover transform group-hover:scale-105 transition-all duration-300 cursor-pointer"
+                                />
+                            </div>
+                            {/* Image 4 */}
+                            <div className="w-full group">
+                                <img
+                                    src="/images/winning.png"
+                                    alt="Success Image 4"
+                                    className="rounded-xl shadow-lg w-full h-64 object-cover transform group-hover:scale-105 transition-all duration-300 cursor-pointer"
+                                />
+                            </div>
+                        </div>
+
                     </div>
-
-                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
-                        <CardOne icon={<Kindergarden/>} color={"bg-primary"} number={"25"}
-                                 title={"Years of Excellence"}/>
-                        <CardOne icon={<Book/>} color={"bg-destructive"} number={"1500"} title={"Students Enrolled"}/>
-                        <CardOne icon={<Blocks/>} color={"bg-green"} number={"200"} title={"Dedicated Faculty"}/>
-                        <CardOne icon={<Chalkboard/>} color={"bg-secondary"} number={"100"}
-                                 title={"Awards Won"}/>
-
-                    </div>
-
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 
-export default SuccessProjectOne
-
+export default SuccessProjectTwo
