@@ -3,7 +3,7 @@
 import {useEffect} from 'react';
 import {usePathname} from 'next/navigation';
 
-export const useLoadTop = () => {
+export const UseLoadTop = () => {
     const pathname = usePathname();
 
     useEffect(() => {

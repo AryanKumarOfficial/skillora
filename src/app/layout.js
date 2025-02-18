@@ -1,5 +1,5 @@
 import "./globals.css";
-import {useLoadTop} from "@/hooks/useLoadTop.js"
+import {UseLoadTop} from "@/hooks/UseLoadTop.js"
 import ScrollButton from "@/components/ui/ScrollButton";
 import {Toaster} from "react-hot-toast";
 
@@ -12,7 +12,7 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body>
-        <useLoadTop/>
+        <UseLoadTop/>
         <Toaster
             position="top-right"
             reverseOrder={false}
