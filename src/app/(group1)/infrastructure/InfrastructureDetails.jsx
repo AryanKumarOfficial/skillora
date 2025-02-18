@@ -2,10 +2,10 @@
 import React, {useState} from 'react'
 import SectionName from '@/components/ui/sectionName'
 import Title from '@/components/ui/title'
-import CardOne from './cardOne'
-import CardTwo from './cardTwo'
-import CardThree from './cardThree'
-import CardFour from './cardFour'
+import CardOne from '@/app/(group1)/infrastructure/cardOne'
+import CardTwo from '@/app/(group1)/infrastructure/cardTwo'
+import CardThree from '@/app/(group1)/infrastructure/cardThree'
+import CardFour from '@/app/(group1)/infrastructure/cardFour'
 import SlideUp from '@/lib/animations/slideUp'
 
 const categoryList = [
