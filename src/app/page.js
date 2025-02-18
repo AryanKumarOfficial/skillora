@@ -21,7 +21,7 @@ const Home = () => {
             <main>
                 <HeroOne/>
                 {/*<HomeSlider/>*/}
-                <AboutOne isAboutpage={false}/>
+                <AboutOne isAboutpage={false} gridClass={"my-14"}/>
                 <Vision/>
                 <Counters/>
                 {/*<SuccessProjectOne/>*/}
