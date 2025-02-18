@@ -13,11 +13,10 @@ export const metadata = {
 const ContactUs = () => {
     return (
         <main>
-            <PageTitle pageName={"Contact Us"} breadcrumbCurrent={"Contact Us"} />
-            <ContactAddress />
-            <GoogleMap />
-            <ContactForm />
-            <NewsletterTwo />
+            <PageTitle pageName={"Contact Us"} breadcrumbCurrent={"Contact Us"}/>
+            <ContactForm/>
+            <ContactAddress/>
+            <GoogleMap/>
         </main>
     )
 }

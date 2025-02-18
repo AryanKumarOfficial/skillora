@@ -19,12 +19,12 @@ const PageTitle = ({pageName, breadcrumbLink = "/", breadcrumbCurrent, className
                             </ul>
                         </div>
                         <div className="relative">
-                            <Image src={'/images/shapes/bread-cat.png'} width={49} height={82} alt="cat-img"
-                                   className="absolute bottom-5 -left-[30px] animate-up-down"/>
-                            <Image src={'/images/shapes/bread-thumb.png'} width={289} height={321} alt="thumb-img"
-                                   className="sm:max-h-full max-h-60"/>
-                            <Image src={'/images/shapes/bread-child.png'} width={88} height={157} alt="child-img"
-                                   className="absolute bottom-0 right-0 animate-left-right"/>
+                            {/*<Image src={'/images/shapes/bread-cat.png'} width={49} height={82} alt="cat-img"*/}
+                            {/*       className="absolute bottom-5 -left-[30px] animate-up-down"/>*/}
+                            <Image src={'/images/near-breadcrumb.png'} width={289} height={321} alt="thumb-img"
+                                   className="sm:max-h-full max-h-60 animate-up-down"/>
+                            {/*<Image src={'/images/near-breadcrumb.png'} width={88} height={157} alt="child-img"*/}
+                            {/*       className="absolute bottom-0 right-0 animate-left-right"/>*/}
                         </div>
 
                     </div>

@@ -165,13 +165,13 @@ export const menuList = [
     },
     {
         id: 7,
-        path: "#",
+        path: "/notice",
         label: "Notice",
         dropDownMenu: false
     },
     {
         id: 8,
-        path: "#",
+        path: "contact-us",
         label: "Contact Us",
         dropDownMenu: false
     },
