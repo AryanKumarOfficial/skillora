@@ -30,7 +30,7 @@ const StaffInformation = ({ teacher }) => {
 
                 {/* Information Section */}
                 <motion.div variants={fadeIn} className="flex flex-col justify-center p-5 rounded-xl">
-                    <Title size="3xl">{teacher?.name}</Title>
+                    <Title size="3.5xl">{teacher?.name}</Title>
                     <Title size="2xl" className="text-secondary font-semibold">{teacher?.designation}</Title>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
