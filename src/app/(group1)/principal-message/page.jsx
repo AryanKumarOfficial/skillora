@@ -11,7 +11,7 @@ export const metadata = {
 export default function PrincipalMessage() {
     return (
         <main>
-            <PageTitle pageName={"Principal's Message"} breadcrumbCurrent={"principal-message"}
+            <PageTitle pageName={"Principal's Message"} breadcrumbCurrent={"Principal's Message"}
                        breadcrumbLink={"/principal-message"}/>
             <Welcome isAboutpage={false}/>
             <PrincipalDesk/>

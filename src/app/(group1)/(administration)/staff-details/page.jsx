@@ -6,7 +6,7 @@ const StaffDetailsPage = () => {
     return (
         <main>
             <PageTitle pageName={"Our Staffs"}
-                       breadcrumbCurrent={"staff-details"}
+                       breadcrumbCurrent={"Our Staffs"}
                        breadcrumbLink={"/staff-details"}
             />
             <StaffDetailsComponent/>

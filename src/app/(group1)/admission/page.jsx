@@ -4,7 +4,7 @@ import AdmissionForm from "@/app/(group1)/admission/AdmissionForm";
 const AdmissionPage = () => {
     return (
         <main>
-            <PageTitle pageName={"Admission"} breadcrumbCurrent={"admission"} breadcrumbLink={"/admission"}/>
+            <PageTitle pageName={"Admission"} breadcrumbCurrent={"Admission"} breadcrumbLink={"/admission"}/>
             <AdmissionForm/>
         </main>
     )

@@ -7,7 +7,7 @@ export default function SchoolCommitteePage() {
         <main>
             <PageTitle
                 pageName={"School Committee"}
-                breadcrumbCurrent={"School Committee".toLocaleLowerCase().split(" ").join("-")}
+                breadcrumbCurrent={"School Committee"}
                 breadcrumbLink={"//school-committee"}
             />
             <SchoolCommittee/>

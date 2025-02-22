@@ -21,7 +21,7 @@ const StaffSinglePage = ({params}) => {
         <main>
             <PageTitle
                 pageName={"Staff Details"}
-                breadcrumbCurrent={`staff-details > ${params.id}`}
+                breadcrumbCurrent={`Staffs Details`}
                 breadcrumbLink={`/staff-details/${params.id}`}
             />
                 <SectionName className={"container mx-auto w-full text-center mb-5 text-4xl"}>

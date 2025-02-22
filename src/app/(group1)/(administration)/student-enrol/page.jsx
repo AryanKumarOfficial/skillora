@@ -6,7 +6,7 @@ export default function StudentEnrolPage() {
     return (
         <main>
             <PageTitle pageName={"Enrolled Students"}
-                       breadcrumbCurrent={"Student Enrolment"}
+                       breadcrumbCurrent={"Enrolled Students"}
                        breadcrumbLink={"/student-enrol"}
             />
             <EnrollmentDetails/>

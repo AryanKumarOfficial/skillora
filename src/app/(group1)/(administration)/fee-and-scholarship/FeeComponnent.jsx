@@ -1,84 +1,90 @@
-import React from "react";
 import SectionName from "@/components/ui/sectionName";
+import SectionDescription from "@/components/ui/sectionDescription";
 import Title from "@/components/ui/title";
-
-const fees = {
-    onAdmission: [
-        {name: "Registration Charges", amount: "₹500"},
-        {name: "Admission Fee", amount: "₹5,000"},
-        {name: "Annual Collection", amount: "₹10,000"},
-        {name: "Annual Charges", amount: "₹8,000"},
-        {name: "Development Fees", amount: "₹5,000"},
-    ],
-    tuitionFee: [
-        {name: "Class Prep to X", amount: "₹2,500 per month"},
-        {name: "Class XI & XII", amount: "₹3,000 per month"},
-    ],
-    additionalFees: [
-        {name: "Computer Fee (Per Month) - Class X & XII (Optional)", amount: "₹500"},
-        {name: "Science Fee (Per Month - Per Subject) - Class X & XII (Physics, Chemistry, Biology)", amount: "₹300"},
-    ],
-};
-
-const scholarships = [
-    {name: "Merit Scholarship", criteria: "Above 90% in previous class", benefit: "25% fee waiver"},
-    {name: "Sports Excellence", criteria: "National/State level achievements", benefit: "Up to 50% fee waiver"},
-    {name: "Sibling Discount", criteria: "Two or more siblings", benefit: "10% discount for second child"},
-    {name: "Girls Education Initiative", criteria: "All girl students", benefit: "Special fee consideration"},
-];
 
 export default function FeeAndScholarship() {
     return (
-        <section className="container mx-auto py-12 px-6">
-            <SectionName className="text-center text-4xl font-bold text-primary mb-10">
-                Fee & Scholarship Details
+        <div className="max-w-7xl mx-auto px-4 py-8">
+            {/* Page Title */}
+            <SectionName className="text-center mb-12 text-xl lg:text-4xl">
+                Fees &amp; Scholarships
             </SectionName>
 
-            <div className="grid lg:grid-cols-2 gap-8">
-                {Object.entries(fees).map(([category, items]) => (
-                    <div key={category} className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-primary">
-                        <Title size="2xl" className="text-xl font-semibold mb-4 text-primary capitalize">
-                            {category.replace(/([A-Z])/g, " $1")}
-                        </Title>
-                        <ul className="space-y-3">
-                            {items.map((fee, index) => (
-                                <li key={index} className="flex justify-between py-2 border-b text-gray-700">
-                                    <span>{fee.name}</span>
-                                    <span className="font-bold text-gray-900">{fee.amount}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
+            {/* Fee Structure Section */}
+            <div className="mb-16">
+                <SectionDescription>
+                    <Title size={"2xl"} className="font-semibold mb-4">Fee Structure</Title>
+                    <p className="text-gray-700">
+                        We offer a transparent and structured fee system for all academic
+                        programs.
+                    </p>
+                </SectionDescription>
 
-            <div className="mt-12">
-                <Title size="2xl" className="text-2xl font-semibold mb-6 text-primary">
-                    Scholarship Opportunities
-                </Title>
-                <div className="grid lg:grid-cols-2 gap-6">
-                    {scholarships.map((scholarship, index) => (
-                        <div key={index}
-                             className="bg-primary text-white p-6 rounded-lg shadow-lg">
-                            <h4 className="text-lg font-semibold text-white">{scholarship.name}</h4>
-                            <p className="mt-2 text-white"><strong>Criteria:</strong> {scholarship.criteria}</p>
-                            <p className={"text-white"}><strong>Benefit:</strong> {scholarship.benefit}</p>
-                        </div>
-                    ))}
+                {/* Responsive Table Container */}
+                <div className="mt-6 rounded-lg overflow-hidden shadow bg-white">
+                    <div className="overflow-x-auto">
+                        <table className="w-full border-collapse">
+                            <thead className="bg-warm text-primary">
+                            <tr>
+                                <th className="px-4 py-2 text-left font-semibold">
+                                    Program
+                                </th>
+                                <th className="px-4 py-2 text-left font-semibold">
+                                    Annual Fee
+                                </th>
+                                <th className="px-4 py-2 text-left font-semibold">
+                                    Additional Charges
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-200">
+                            <tr className="odd:bg-white even:bg-gray-50">
+                                <td className="px-4 py-3">High School</td>
+                                <td className="px-4 py-3">₹50,000</td>
+                                <td className="px-4 py-3">₹5,000 (Lab &amp; Activities)</td>
+                            </tr>
+                            <tr className="odd:bg-white even:bg-gray-50">
+                                <td className="px-4 py-3">Senior Secondary</td>
+                                <td className="px-4 py-3">₹60,000</td>
+                                <td className="px-4 py-3">₹7,000 (Lab &amp; Activities)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md mt-10 border-l-4 border-secondary">
-                <Title size="2xl" className="text-xl font-semibold mb-4 text-secondary">
-                    Important Notes:
-                </Title>
-                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                    <li>All fees are subject to revision.</li>
-                    <li>Fee once paid is non-refundable.</li>
-                    <li>Late fee charges applicable after the due date.</li>
-                    <li>Scholarships are subject to verification of documents and approval.</li>
-                </ul>
+            {/* Scholarship Section */}
+            <div>
+                <SectionDescription>
+                    <Title size={"2xl"} className="text-2xl font-semibold mb-4">Scholarships</Title>
+                    <p className="text-gray-700">
+                        We believe in rewarding academic excellence and providing financial
+                        assistance to deserving students.
+                    </p>
+                </SectionDescription>
+
+                {/* Scholarship Cards */}
+                <div className="mt-6 grid md:grid-cols-2 gap-6">
+                    {/* Card 1 */}
+                    <div className="p-6 bg-gradient-to-br from-cream-foreground to-warm rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <h3 className="text-lg font-semibold">Merit-Based Scholarship</h3>
+                        <p className="text-gray-700 mt-2">
+                            Awarded to students who achieve 90% and above in their previous
+                            academic year.
+                        </p>
+                    </div>
+
+                    {/* Card 2 */}
+                    <div className="p-6 bg-gradient-to-br from-cream-foreground to-warm rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <h3 className="text-lg font-semibold">Financial Aid Scholarship</h3>
+                        <p className="text-gray-700 mt-2">
+                            Available for students from economically weaker sections to
+                            support their education.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
     );
 }

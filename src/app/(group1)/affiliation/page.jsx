@@ -12,7 +12,7 @@ export const metadata = {
 const Affiliation = () => {
     return (
         <main>
-            <PageTitle pageName={"Affiliation"} breadcrumbCurrent={"affiliation"}/>
+            <PageTitle pageName={"Affiliation"} breadcrumbCurrent={"Affiliation"} breadcrumbLink={"/affiliation"}/>
             <AffiliationComp/>
             <AffiliationBanner/>
         </main>

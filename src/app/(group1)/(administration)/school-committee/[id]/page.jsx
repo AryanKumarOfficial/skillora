@@ -20,7 +20,7 @@ const CommitteeSinglePage = ({params}) => {
         <main>
             <PageTitle
                 pageName={"Committee Details"}
-                breadcrumbCurrent={`committee-details > ${params.id}`}
+                breadcrumbCurrent={`Committee Details`}
                 breadcrumbLink={`/school-committee/${params.id}`}
             />
             <SectionName className={"container mx-auto w-full text-center mb-5 text-4xl"}>

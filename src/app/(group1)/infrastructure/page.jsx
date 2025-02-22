@@ -5,7 +5,7 @@ import InfrastructureGallery from "@/app/(group1)/infrastructure/InfrastructureD
 const InfrastructurePage = () => {
     return (
         <main>
-            <PageTitle pageName="Infrastructure" breadcrumbCurrent={"infrastructures"}
+            <PageTitle pageName="Infrastructure" breadcrumbCurrent={"Infrastructures"}
                        breadcrumbLink={"/infrastructure"}/>
             <InfrastructureGallery/>
         </main>
