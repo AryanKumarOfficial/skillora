@@ -3,6 +3,7 @@ import PageTitle from "@/components/sections/pageTitle";
 import {FaBookOpen, FaGraduationCap, FaSchool, FaFlask, FaChartBar, FaPaintBrush} from "react-icons/fa";
 import SlideUp from "@/lib/animations/slideUp";
 import SectionName from "@/components/ui/sectionName";
+import Card from "@/app/(group1)/(acedemics)/school-curriculum/Card";
 
 export default function SchoolCurriculum() {
     const data = [
@@ -28,22 +29,15 @@ export default function SchoolCurriculum() {
                 breadcrumbCurrent="School Curriculum"
                 breadcrumbLink="/school-curriculum"
             />
-            <section className="container mx-auto px-4 py-8">
-                <SectionName className={"text-center text-3xl font-bold my-10"}>
-                    School Curriculum
-                </SectionName>
+            <section className="container min-h-screen flex justify-center items-center mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {data.map((item, index) => (
-                        <SlideUp key={index}>
-                            <div
-                                className="flex flex-col items-center bg-warm shadow-lg rounded-lg p-6 border  hover:shadow-xl transition-transform transform hover:scale-105 cursor-pointer">
-                                <div className={`${item.color} mb-4`}>
-                                    {item.icon}
-                                </div>
-                                <h3 className="text-xl text-primary font-bold">{item.name}</h3>
-                                <p className="text-center text-secondary">{item.description}</p>
-                            </div>
-                        </SlideUp>
+                        <Card
+                            icon={item.icon}
+                            title={item.name}
+                            description={item.description}
+                            color={item.color}
+                        />
                     ))}
                 </div>
             </section>
