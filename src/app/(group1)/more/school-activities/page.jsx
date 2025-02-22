@@ -11,7 +11,7 @@ const SchoolActivities = () => {
     return (
         <main>
             <PageTitle pageName={"School Activities"}
-                       breadcrumbCurrent={"School Activities".toLowerCase().split(" ").join("-")}/>
+                       breadcrumbCurrent={"School Activities"}/>
             <SchoolActivitiesGrid/>
         </main>
     )

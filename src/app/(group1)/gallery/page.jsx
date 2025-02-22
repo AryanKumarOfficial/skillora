@@ -39,7 +39,7 @@ export default function GalleryPage() {
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 0.5}}
             >
-                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent inline-block">
+                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-secondary to-warm bg-clip-text text-transparent inline-block">
                     Event Glimpses
                 </h1>
                 <p className="mt-4 text-gray-600 md:text-lg max-w-2xl mx-auto">

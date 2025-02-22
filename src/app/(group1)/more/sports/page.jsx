@@ -12,7 +12,7 @@ const Sports = () => {
     return (
         <main>
             <PageTitle pageName={"Sports"}
-                       breadcrumbCurrent={"Sports".toLowerCase().split(" ").join("-")}/>
+                       breadcrumbCurrent={"Sports"}/>
             <SportsGrid/>
         </main>
     )
