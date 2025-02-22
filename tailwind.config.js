@@ -142,6 +142,13 @@ module.exports = {
                 "shimmer-fast": 'shimmer 1s infinite linear',
                 "float": 'float 3s ease-in-out infinite',
             },
+            fontSize: {
+                title: "var(--font-title)",
+                subtitle: "var(--font-subtitle)",
+                body: "var(--font-body)",
+                small: "var(--font-small)",
+
+            }
         },
     },
     plugins: [require("tailwindcss-animate")],

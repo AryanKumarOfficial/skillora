@@ -1,28 +1,37 @@
 .heroContainer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: 100vh;  /* Ensure full viewport height */
+    overflow: hidden;
 }
 
-.heroContainer:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% + 125px);
-    background: url("../../public/images/school-1.png") no-repeat center center/cover;
-    opacity: 0.75;
-}
-
+/* Use 100% height for the pseudo elements */
+.heroContainer:before,
 .heroContainer:after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 125px);
+    height: 100%;
+}
+
+.heroContainer:before {
+    background: url("../../public/images/school-1.png") no-repeat center center;
+    background-size: cover;
+    opacity: 0.75;
+}
+
+.heroContainer:after {
     background: #000;
     opacity: 0.55;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .heroContainer {
+        padding-top: 60px;
+    }
 }

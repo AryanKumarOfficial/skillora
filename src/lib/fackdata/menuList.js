@@ -83,7 +83,7 @@ export const menuList = [
     },
     {
         id: 4,
-        path: "#",
+        path: "/academics",
         label: "Academics",
         dropDownMenu: [
             {
