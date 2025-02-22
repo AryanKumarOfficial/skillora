@@ -1,5 +1,6 @@
 import React from "react";
 import PageTitle from "@/components/sections/pageTitle";
+import ResultsPage from "@/app/(group1)/(acedemics)/cbse-result/Results";
 
 export default function CBSEResults() {
 
@@ -12,6 +13,7 @@ export default function CBSEResults() {
                 breadcrumbCurrent="CBSE Results"
                 breadcrumbLink="/cbse-result"
             />
+            <ResultsPage/>
         </main>
     );
 }
