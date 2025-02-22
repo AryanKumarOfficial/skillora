@@ -15,6 +15,7 @@ const buttonVariants = cva(
         secondary: "bg-green text-cream-foreground rounded-md leading-normal after:bg-secondary ",
         ghost: "bg-secondary text-cream-foreground rounded-md leading-normal after:bg-green",
         pill: "bg-destructive border-2 border-destructive rounded-full text-cream-foreground hover:bg-transparent hover:text-destructive-foreground",
+        icon: "bg-green border-2 border-green rounded-full text-cream-foreground hover:bg-transparent hover:text-green-foreground",
       },
       size: {
         default: "max-h-15 lg:py-5 px-[30px] py-2.5",

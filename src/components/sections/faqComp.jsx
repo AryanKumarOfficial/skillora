@@ -12,7 +12,7 @@ import { faqData } from '@/lib/fackdata/faqData'
 
 
 
-const FaqComp = () => {
+const   FaqComp = () => {
   return (
     <section className="lg:pb-15 pb-10">
       <div className="container">
