@@ -10,6 +10,14 @@ import {
     FaUniversity,
     FaCalendarAlt,
     FaVenusMars,
+    FaHashtag,
+    FaListAlt,
+    FaUsers,
+    FaMoneyBillAlt,
+    FaMobileAlt,
+    FaBriefcase,
+    FaCalendarDay,
+    FaTransgender,
 } from 'react-icons/fa'
 
 import Input from '@/components/ui/input'
@@ -47,43 +55,29 @@ const AdmissionForm = () => {
                                     <h3 className="text-[28px] font-bold leading-[148%] font-nunito">Fill Your Admission
                                         Form</h3>
                                     <form action="#" className="mt-7">
-                                        {/* Full Name and Mother's Name */}
+                                        {/* Admission No and Student's Name */}
                                         <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
                                             <div className="relative">
-                                                <Input type={"text"} placeholder={"Full Name"} id="name"
+                                                <Input type={"text"} placeholder={"Admission No"} id="admission-no"
                                                        className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
-                                                <label htmlFor="name"
+                                                <label htmlFor="admission-no"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaHashtag/></label>
+                                            </div>
+                                            <div className="relative">
+                                                <Input type={"text"} placeholder={"Student's Name"} id="student-name"
+                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="student-name"
                                                        className="absolute right-5 top-1/2 -translate-y-1/2"><FaUser/></label>
                                             </div>
-                                            <div className="relative">
-                                                <Input type={"text"} placeholder={"Father's Name"} id="father-name"
-                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
-                                            </div>
                                         </div>
 
-                                        {/* Email, Phone Number and Date of Birth */}
+                                        {/* Class and Gender */}
                                         <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
                                             <div className="relative">
-                                                <Input type={"email"} placeholder={"Email Address"} id="email"
+                                                <Input type={"text"} placeholder={"Class"} id="class"
                                                        className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
-                                                <label htmlFor="email"
-                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaEnvelope/></label>
-                                            </div>
-                                            <div className="relative">
-                                                <Input type={"text"} placeholder={"Phone Number"} id="phone"
-                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
-                                                <label htmlFor="phone"
-                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaPhone/></label>
-                                            </div>
-                                        </div>
-
-                                        {/* Date of Birth and Gender */}
-                                        <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
-                                            <div className="relative">
-                                                <Input type={"date"} placeholder={"Date of Birth"} id="dob"
-                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
-                                                <label htmlFor="dob"
-                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaCalendarAlt/></label>
+                                                <label htmlFor="class"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaListAlt/></label>
                                             </div>
                                             <div className="relative">
                                                 <div className="flex items-center gap-5">
@@ -103,73 +97,125 @@ const AdmissionForm = () => {
                                                         Others
                                                     </label>
                                                 </div>
+                                                <label htmlFor="gender"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"></label>
                                             </div>
                                         </div>
 
-                                        {/* Address, Institution and Course */}
+                                        {/* DOB and Area */}
                                         <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
                                             <div className="relative">
-                                                <Input type={"text"} placeholder={"Current Address"} id="address"
+                                                <Input type={"date"} placeholder={"DOB"} id="dob"
+                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="dob"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaCalendarAlt/></label>
+                                            </div>
+                                            <div className="relative">
+                                                <Input type={"text"} placeholder={"Area"} id="area"
+                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="area"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaMapMarkerAlt/></label>
+                                            </div>
+                                        </div>
+
+                                        {/* Address and Religion */}
+                                        <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
+                                            <div className="relative">
+                                                <Input type={"text"} placeholder={"Address"} id="address"
                                                        className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
                                                 <label htmlFor="address"
                                                        className="absolute right-5 top-1/2 -translate-y-1/2"><FaMapMarkerAlt/></label>
                                             </div>
                                             <div className="relative">
-                                                <Input type={"text"} placeholder={"Previous Institution"}
-                                                       id="institution"
+                                                <Input type={"text"} placeholder={"Religion"} id="religion"
                                                        className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
-                                                <label htmlFor="institution"
-                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaUniversity/></label>
-                                            </div>
-                                        </div>
-
-                                        {/* Course, Nationality, and Profile Picture */}
-                                        <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
-                                            <div className="relative">
-                                                <Input type={"text"} placeholder={"Desired Course"} id="course"
-                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
-                                                <label htmlFor="course"
-                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaBook/></label>
-                                            </div>
-                                            <div className="relative">
-                                                <Input type={"text"} placeholder={"Nationality"} id="nationality"
-                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
-                                                <label htmlFor="nationality"
+                                                <label htmlFor="religion"
                                                        className="absolute right-5 top-1/2 -translate-y-1/2"><FaGlobe/></label>
                                             </div>
                                         </div>
 
-                                        {/* Emergency Contact and Upload Profile Picture */}
+                                        {/* Category and Family Income */}
                                         <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
                                             <div className="relative">
-                                                <Input type={"text"} placeholder={"Emergency Contact Name"}
-                                                       id="emergency-name"
+                                                <Input type={"text"} placeholder={"Category"} id="category"
                                                        className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="category"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaUsers/></label>
                                             </div>
                                             <div className="relative">
-                                                <Input type={"text"} placeholder={"Emergency Contact Phone"}
-                                                       id="emergency-phone"
+                                                <Input type={"text"} placeholder={"Family Income"} id="family-income"
                                                        className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="family-income"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaMoneyBillAlt/></label>
                                             </div>
                                         </div>
 
-                                        {/* Additional Information and Checkbox */}
+                                        {/* Mother's Name and Father's Name */}
+                                        <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
+                                            <div className="relative">
+                                                <Input type={"text"} placeholder={"Mother's Name"} id="mother-name"
+                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="mother-name"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaUser/></label>
+                                            </div>
+                                            <div className="relative">
+                                                <Input type={"text"} placeholder={"Father's Name"} id="father-name"
+                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="father-name"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaUser/></label>
+                                            </div>
+                                        </div>
+
+                                        {/* Mother's Mobile and Father's Mobile */}
+                                        <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
+                                            <div className="relative">
+                                                <Input type={"text"} placeholder={"Mother's Mobile"} id="mother-mobile"
+                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="mother-mobile"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaMobileAlt/></label>
+                                            </div>
+                                            <div className="relative">
+                                                <Input type={"text"} placeholder={"Father's Mobile"} id="father-mobile"
+                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="father-mobile"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaMobileAlt/></label>
+                                            </div>
+                                        </div>
+
+                                        {/* Mother's Occupation and Father's Occupation */}
+                                        <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
+                                            <div className="relative">
+                                                <Input type={"text"} placeholder={"Mother's Occupation"}
+                                                       id="mother-occupation"
+                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="mother-occupation"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaBriefcase/></label>
+                                            </div>
+                                            <div className="relative">
+                                                <Input type={"text"} placeholder={"Father's Occupation"}
+                                                       id="father-occupation"
+                                                       className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                                <label htmlFor="father-occupation"
+                                                       className="absolute right-5 top-1/2 -translate-y-1/2"><FaBriefcase/></label>
+                                            </div>
+                                        </div>
+
+                                        {/* Admission Date (Full Width) */}
                                         <div className="relative mt-5">
-                                        <textarea name="message" id="message" placeholder="Additional Information"
-                                                  className="w-full min-h-36 rounded-[10px] border-2 text-[#686868] border-[#F2F2F2] px-5 py-[15px] outline-none"></textarea>
+                                            <Input type={"date"} placeholder={"Admission Date"} id="admission-date"
+                                                   className={"text-[#686868] border-[#F2F2F2] lg:py-[15px] px-5"}/>
+                                            <label htmlFor="admission-date"
+                                                   className="absolute right-5 top-1/2 -translate-y-1/2"><FaCalendarDay/></label>
                                         </div>
 
-                                        <div className="mt-5">
-                                            <label className="flex items-center gap-2">
-                                                <input type="checkbox"/>
-                                                <span>I declare that the information provided is true to the best of my knowledge.</span>
-                                            </label>
-                                        </div>
 
-                                        {/* Submit Button */}
-                                        <Button variant="pill"
-                                                className="w-full bg-primary border-primary hover:text-primary-foreground lg:mt-10 mt-5">Submit
-                                            Application</Button>
+                                        {/* Submit and Cancel Buttons */}
+                                        <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-7.5">
+                                            <Button variant="pill"
+                                                    className="w-full bg-primary border-primary hover:text-primary-foreground lg:mt-0 mt-5">Submit</Button>
+                                            <Button variant="pill"
+                                                    className="w-full bg-red-500 border-red-500 hover:text-primary-foreground lg:mt-0 mt-5">Cancel</Button>
+                                        </div>
                                     </form>
                                 </div>
                             </SlideDown>
