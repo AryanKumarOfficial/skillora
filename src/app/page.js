@@ -8,6 +8,7 @@ import Counters from "@/components/sections/counters";
 import News from "@/components/sections/news";
 import LatestServices from "@/components/latest";
 import FooterTwo from "@/components/sections/footers/footerTwo";
+import Welcome from "@/app/(group1)/principal-message/Welcome";
 
 export const metadata = {
     title: "Home | Future Bright Academy",
@@ -21,7 +22,8 @@ const Home = () => {
             <main>
                 <HeroOne/>
                 {/*<HomeSlider/>*/}
-                <AboutOne isAboutpage={false} gridClass={"my-14"}/>
+                {/*<AboutOne isAboutpage={false} gridClass={"my-14"}/>*/}
+                <Welcome isHome={true}/>
                 <Vision/>
                 <Counters/>
                 {/*<SuccessProjectOne/>*/}

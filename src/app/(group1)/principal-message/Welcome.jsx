@@ -9,7 +9,7 @@ import SlideUp from '@/lib/animations/slideUp'
 import SectionDescription from '@/components/ui/sectionDescription'
 import {cn} from '@/lib/utils'
 
-const Welcome = ({gridClass, isAboutpage}) => {
+const Welcome = ({gridClass, isAboutpage, isHome = false}) => {
     return (
         <section className="lg:pt-15 pt-10 lg:pb-15 pb-10">
             <div className="container">
@@ -92,6 +92,13 @@ const Welcome = ({gridClass, isAboutpage}) => {
                             fostering a true partnership with families. Join us as we embark on a journey of discovery
                             and lifelong learning.
                         </SectionDescription>
+                        {isHome && (
+                            <Link href="/principal-message" legacyBehavior>
+                                <a>
+                                    <Button variant={"secondary"} className={"mt-5"}>Read More</Button>
+                                </a>
+                            </Link>
+                        )}
                     </div>
                     {/* End right side */}
                 </div>
