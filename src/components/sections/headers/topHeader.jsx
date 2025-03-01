@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import { FaPhone, FaEnvelope, FaLocationDot } from "react-icons/fa6";
+import {FaPhone, FaEnvelope, FaLocationDot} from "react-icons/fa6";
 import SocalIcons from '@/components/ui/socalIcons';
 
 const TopHeader = () => {
@@ -11,13 +11,13 @@ const TopHeader = () => {
                     <div>
                         <ul className="flex gap-7.5">
                             <li className='text-cream-foreground flex items-center gap-4'>
-                                <FaPhone /> <Link href={"#"}>(629) 555-0129</Link>
+                                <FaPhone/> <Link href={"#"}>(629) 555-0129</Link>
                             </li>
                             <li className='text-cream-foreground flex items-center gap-4'>
-                                <FaEnvelope /> <Link href={"#"}>info@example.com</Link>
+                                <FaEnvelope/> <Link href={"mailto:info@iqnaut.com"}>info@iqnaut.com</Link>
                             </li>
                             <li className='text-cream-foreground flex items-center gap-4'>
-                                <FaLocationDot /> <span>6391 Elgin St. Celina, 10299</span>
+                                <FaLocationDot/> <span>6391 Elgin St. Celina, 10299</span>
                             </li>
                         </ul>
                     </div>

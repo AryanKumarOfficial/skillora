@@ -21,8 +21,9 @@ const FooterTwo = () => {
                     <SlideUp delay={2}>
                         <Logo className="text-cream-foreground"/>
                         <div className="mt-10">
-                            <p className=" text-cream-foreground opacity-80">Yes, there are many notable ma corporate
-                                the a od businesses Informati worldwide</p>
+                            <p className=" text-cream-foreground opacity-80">
+                                Empowering young minds with knowledge and innovation.
+                            </p>
                             <SocalIcons prentClass={"gap-5 lg:pt-7.5 pt-5"}
                                         className={"w-9 h-9 bg-[#FFFFFF1A] border-none hover:bg-green"}/>
                         </div>
@@ -38,18 +39,19 @@ const FooterTwo = () => {
                             <li><Link href="/about-us"
                                       className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">About
                                 Us</Link></li>
-                            <li><Link href="/services"
-                                      className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Latest
-                                Service</Link></li>
-                            <li><Link href="/blog"
-                                      className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Latest
-                                Blog And News</Link></li>
-                            <li><Link href="/faq"
-                                      className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">FAQ</Link>
+                            <li><Link href="/principal-message"
+                                      className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Principal's
+                                Message</Link></li>
+                            <li><Link href="/infrastructure"
+                                      className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">
+                                Infrastructure</Link></li>
+                            <li><Link href="/school-curriculum"
+                                      className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">School
+                                Curriculum</Link>
                             </li>
-                            <li><Link href="#"
-                                      className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Our
-                                Creative Team Member</Link></li>
+                            <li><Link href="/more/achievements"
+                                      className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">
+                                Achievements</Link></li>
                         </ul>
                     </SlideUp>
 
@@ -65,8 +67,8 @@ const FooterTwo = () => {
                                 <FaLocationDot className='mt-1.5'/> <span className="max-w-[168px]">1179 KFC Road, Lisbon, Portugal</span>
                             </li>
                             <li className="text-cream-foreground flex gap-4 transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">
-                                <Link href="mailto:abc@gmail.com" className={"flex gap-4"}> <FaEnvelope
-                                    className='mt-1.5'/> sakib23@gmail.com</Link>
+                                <Link href="mailto:skillora@iqnaut.com" className={"flex gap-4"}> <FaEnvelope
+                                    className='mt-1.5'/> skillora@iqnaut.com</Link>
                             </li>
                             <li className="text-cream-foreground flex gap-4 transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">
                                 <Link href="tel:012547892354" className={"flex gap-4"}> <FaPhone

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaEnvelope, FaLocationDot, FaPhone } from 'react-icons/fa6'
+import {FaEnvelope, FaLocationDot, FaPhone} from 'react-icons/fa6'
 import Link from 'next/link'
 import Logo from '@/components/ui/logo'
 import SocalIcons from '@/components/ui/socalIcons'
@@ -13,19 +13,32 @@ const FooterOne = () => {
             <div className="container">
                 <div className="grid lg:grid-cols-[370px_auto_auto] sm:grid-cols-2 grid-cols-1 justify-between gap-7.5">
                     <SlideUp delay={2}>
-                        <Logo />
-                        <p className="pt-4">Yes, there are many notable ma corporate the a  od businesses Informati worldwide</p>
-                        <SocalIcons prentClass={"gap-5 pt-7.5"} className={"w-9 h-9 bg-warm text-muted-foreground hover:text-cream-foreground hover:bg-green"} />
+                        <Logo/>
+                        <p className="pt-4">Empowering young minds with knowledge, creativity, and innovation. At
+                            Skillora Future Bright Academy, we nurture future leaders by providing a world-class
+                            learning environment that fosters growth, curiosity, and excellence.</p>
+                        <SocalIcons prentClass={"gap-5 pt-7.5"}
+                                    className={"w-9 h-9 bg-warm text-muted-foreground hover:text-cream-foreground hover:bg-green"}/>
                     </SlideUp>
 
                     <SlideUp delay={3}>
                         <h3 className="text-2xl font-semibold">Pages</h3>
                         <ul className="flex flex-col gap-[15px] pt-5 min-w-[215px]">
-                            <li><Link href="/about-us" className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">About Us</Link></li>
-                            <li><Link href="/services" className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">Latest Service</Link></li>
-                            <li><Link href="/blog" className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">Latest Blog And News</Link></li>
-                            <li><Link href="/faq" className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">FAQ</Link></li>
-                            <li><Link href="#" className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">Our Creative Team Member</Link></li>
+                            <li><Link href="/about-us"
+                                      className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">About
+                                Us</Link></li>
+                            <li><Link href="/services"
+                                      className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">Latest
+                                Service</Link></li>
+                            <li><Link href="/blog"
+                                      className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">Latest
+                                Blog And News</Link></li>
+                            <li><Link href="/faq"
+                                      className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">FAQ</Link>
+                            </li>
+                            <li><Link href="#"
+                                      className="text-[#686868] transition-all duration-500 hover:ml-1 hover:text-primary-foreground">Our
+                                Creative Team Member</Link></li>
                         </ul>
                     </SlideUp>
 
@@ -34,23 +47,29 @@ const FooterOne = () => {
                         <ul className="flex flex-col gap-[15px] pt-5">
                             <li>
                                 <p className="text-[#686868] flex items-center gap-4">
-                                    <span className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaLocationDot /></span> <span className="max-w-[168px]">1179 KFC Road, Lisbon, Portugal</span>
+                                    <span
+                                        className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaLocationDot/></span>
+                                    <span className="max-w-[168px]">1179 KFC Road, Lisbon, Portugal</span>
                                 </p>
                             </li>
                             <li>
                                 <p className="text-[#686868] flex items-center gap-4">
-                                    <span className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaEnvelope /></span> <Link href="">Sakib23@gmail.com</Link>
+                                    <span
+                                        className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaEnvelope/></span>
+                                    <Link href="">Sakib23@gmail.com</Link>
                                 </p>
                             </li>
                             <li>
                                 <p className="text-[#686868] flex items-center gap-4">
-                                    <span className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaPhone /></span> <Link href="">012547892354</Link>
+                                    <span
+                                        className="w-11 h-11 rounded-full border border-gray-200 flex justify-center items-center text-green-foreground"><FaPhone/></span>
+                                    <Link href="">012547892354</Link>
                                 </p>
                             </li>
                         </ul>
                     </SlideUp>
                 </div>
-                <CopyRight />
+                <CopyRight/>
             </div>
             {/*<ScrollUp />*/}
         </footer>
