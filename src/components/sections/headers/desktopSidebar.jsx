@@ -30,7 +30,7 @@ const DesktopSidebar = ({ active, setActive }) => {
                                 <FaPhone className='text-primary-foreground' /> <a href="" className="ml-2.5">(629) 555-0129</a>
                             </li>
                             <li className='flex items-center'>
-                                <FaEnvelope className='text-primary-foreground' /> <a href="" className="ml-2.5">info@example.com</a>
+                                <FaEnvelope className='text-primary-foreground' /> <a href="" className="ml-2.5">info@iqnaut.com</a>
                             </li>
                             <li className='flex items-center'>
                                 <FaLocationDot className='text-primary-foreground' /> <span className="ml-2.5">6391 Elgin St. Celina, 10299</span>
